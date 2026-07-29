@@ -1,0 +1,15 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 50px;
+    padding: 20px;
+
+    li:hover {
+        text-decoration: underline;
+    }
+    :global(.active) {
+        color: #fff;
+        text-decoration: underline;
+    }
+}

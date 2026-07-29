@@ -1,0 +1,11 @@
+.pagination{
+    grid-column: 2;
+    justify-self: center;
+    
+    button{
+        margin: 3px;
+    }
+    :global(.active){
+        background-color: #747bff;
+    }
+}

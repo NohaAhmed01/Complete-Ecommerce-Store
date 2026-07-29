@@ -1,0 +1,39 @@
+.filterLayout{
+    width: 400px;
+}
+.header{
+    text-transform: capitalize;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.header::after{
+    content: '';
+    width: 100%;
+    border-bottom: solid 1px #fff;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+
+}
+.filterTitle{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+label{
+    font-size: 14px;
+}
+svg{
+    margin-top: 4px;
+    width: 15px;
+    height: 15px;
+}
+input[type="range"]{
+    width: 100%;
+}
+.priceRange{
+    display: flex;
+    justify-content: space-between;
+}
