@@ -34,7 +34,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="checkout" element={<Checkout />} />
-          <Route path="products" element={<Products products={data} />} />
+          <Route path="products" element={data.length > 0 && <Products products={data} />} />
           <Route path="products/:id" element={<ProductDetail />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
