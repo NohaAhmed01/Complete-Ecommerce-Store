@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     max-width: 350px;
-    border: 1px solid #fff;
+    border: 1px solid #ffffff;
     border-radius: 30px;
     justify-self: center;
 }
@@ -49,6 +49,6 @@
     }
     .textSpreader{
         text-decoration: underline;
-        color: #ecdefaec;
+        color: var(--primary-color);
     }
 }

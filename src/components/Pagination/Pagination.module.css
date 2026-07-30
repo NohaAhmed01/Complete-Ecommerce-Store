@@ -6,6 +6,6 @@
         margin: 3px;
     }
     :global(.active){
-        background-color: #747bff;
+        background-color: var(--primary-color);
     }
 }

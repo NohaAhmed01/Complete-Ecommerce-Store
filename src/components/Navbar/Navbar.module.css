@@ -1,13 +1,18 @@
-.navbar{
+.navbar {
     display: flex;
     justify-content: center;
     list-style: none;
     gap: 50px;
     padding: 20px;
 
+    li a{
+        color: var(--primary-color);
+    }
+
     li:hover {
         text-decoration: underline;
     }
+
     :global(.active) {
         color: #fff;
         text-decoration: underline;

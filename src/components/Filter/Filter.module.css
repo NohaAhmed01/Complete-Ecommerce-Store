@@ -1,5 +1,5 @@
 .filterLayout{
-    width: 400px;
+    max-width: 300px;
 }
 .header{
     text-transform: capitalize;
@@ -32,8 +32,16 @@ svg{
 }
 input[type="range"]{
     width: 100%;
+    accent-color: var(--primary-color);
 }
 .priceRange{
     display: flex;
     justify-content: space-between;
+}
+div[role="button"]{
+    cursor: pointer; 
+    background-color:  #646cff26;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
 }
