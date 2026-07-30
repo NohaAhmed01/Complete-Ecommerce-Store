@@ -8,5 +8,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 35px;
     margin-inline: auto;
-    /* max-height: 1250px; */
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
 }

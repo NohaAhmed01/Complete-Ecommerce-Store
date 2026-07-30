@@ -1,17 +1,15 @@
 import { useState } from "react";
 import styles from "./Filter.module.css";
 
+//style to rotate svg when clicked
 const rotate = {
   transform: "rotate(180deg)",
 };
 
-function Filter({ uniqueCategories, maxPrice, minPrice, category, selectedCategories, priceRange, setPriceRange }) {
-
+function Filter({ uniqueCategories, maxPrice, minPrice, category, storeSelectedCategories, priceRange, setPriceRange, handleClearingCatFilters }) {
+  //using state to toggle collapsing each filter
   const [isCatFilterShown, setIsCatFilterShown] = useState(true);
   const [isPriceFilterShown, setIsPriceFilterShown] = useState(true);
-/*   const [category, setCategory] = useState([]);
-  const [priceRange, setPriceRange] = useState(maxPrice); */
-
   
   function collapseCatFilters() {
     setIsCatFilterShown(() => !isCatFilterShown);
@@ -19,13 +17,6 @@ function Filter({ uniqueCategories, maxPrice, minPrice, category, selectedCatego
   function collapsePriceFilters() {
     setIsPriceFilterShown(() => !isPriceFilterShown);
   }
-
-/*   function selectedCategories(e) {
-    if(e.target.checked)
-        setCategory([...category, e.target.name])
-    else
-        setCategory(category.filter((c)=> c!==e.target.name))
-  } */
 
   return (
     <div className={styles.filterLayout}>
@@ -59,6 +50,7 @@ function Filter({ uniqueCategories, maxPrice, minPrice, category, selectedCatego
         </div>
 
         <div className={styles.filterBox}>
+          {isCatFilterShown && category.length > 0 && <div role="button" onClick={handleClearingCatFilters} > &#10799; clear category filters</div>}
           {isCatFilterShown &&
             uniqueCategories.map((cat) => (
               <div key={cat}>
@@ -67,7 +59,7 @@ function Filter({ uniqueCategories, maxPrice, minPrice, category, selectedCatego
                   name={cat}
                   value={cat}
                   checked={category.includes(cat)}
-                  onChange={(e) => selectedCategories(e)}
+                  onChange={(e) => storeSelectedCategories(e)}
                 />
                 <label> {cat}</label>
               </div>
