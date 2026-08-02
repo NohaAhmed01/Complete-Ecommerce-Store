@@ -10,7 +10,11 @@ function ProductItem({ item }) {
     <div className={styles.productCard}>
       <div className={styles.productImgContainer}>
         <img className={styles.mainImage} src={images[0]} alt={title} />
-        <img className={styles.hoverImage} src={images[1]} alt={title} />
+        {images.length > 1 ? (
+          <img className={styles.hoverImage} src={images[1]} alt={title} />
+        ) : (
+          <img className={styles.hoverImage} src={images[0]} alt={title} />
+        )}
       </div>
       <div className={styles.productDetails}>
         <h3>{title}</h3>

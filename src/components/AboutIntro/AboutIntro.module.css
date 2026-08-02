@@ -1,0 +1,16 @@
+.heading {
+    position: relative;
+
+    img {
+        min-width: 100%;
+        height: 80vh;
+        filter: brightness(50%) blur(2px) ;
+    }
+    .text{
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        text-align: center;
+        max-width: 600px;
+    }
+}
