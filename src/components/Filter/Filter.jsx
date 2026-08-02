@@ -103,7 +103,7 @@ function Filter({ uniqueCategories, maxPrice, minPrice, category, storeSelectedC
               name="price"
               min={minPrice}
               max={maxPrice}
-              step={(maxPrice%minPrice)*100}
+              step={5}
               value={priceRange? priceRange : maxPrice }
               onChange={(e) => setPriceRange(Number(e.target.value))}
             />

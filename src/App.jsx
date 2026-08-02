@@ -16,9 +16,9 @@ function App() {
     async function fetchData() {
       try {
         setisLoading(true);
-        const res = await fetch("https://api.escuelajs.co/api/v1/products");
+        const res = await fetch("https://dummyjson.com/products");
         const data = await res.json();
-        setData(data);
+        setData(data.products);
       } catch (error) {
         console.error("some error happened")
       } finally {

@@ -9,7 +9,7 @@ import Filter from "../components/Filter/Filter";
 function Products({ products }) {
   //getting a list of all unique categories to display in filters
   const uniqueCategories = [
-    ...new Set(products.map((item) => item.category.name)),
+    ...new Set(products.map((item) => item.category)),
   ];
   //getting a list of all unique prices to extract the min and max to use in price range filter
   const prices = [...new Set(products.map((item) => item.price))];
@@ -24,13 +24,13 @@ function Products({ products }) {
   //creating a filtered products array based on the selected filters
   const filteredProducts = products.filter((i) => {
     const selectedCategory =
-      !category.length || category.includes(i.category.name);
+      !category.length || category.includes(i.category);
     const selectedRange = i.price >= minPrice && i.price <= priceRange;
     return selectedCategory && selectedRange;
   });
 
   //handling pagination logic
-  const productsPerPage = 9;
+  const productsPerPage = 6;
   //const [currentPage, setCurrentPage] = useState(0);
   const [searchParams, setSearchParams] = useSearchParams();
   const currentPage = Number(searchParams.get("page")) || 1;

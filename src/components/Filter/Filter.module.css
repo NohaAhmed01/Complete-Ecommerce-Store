@@ -1,5 +1,6 @@
 .filterLayout{
     max-width: 300px;
+    min-width: 200px;
 }
 .header{
     text-transform: capitalize;
