@@ -6,11 +6,20 @@ const rotate = {
   transform: "rotate(180deg)",
 };
 
-function Filter({ uniqueCategories, maxPrice, minPrice, category, storeSelectedCategories, priceRange, setPriceRange, handleClearingCatFilters }) {
+function Filter({
+  uniqueCategories,
+  maxPrice,
+  minPrice,
+  category,
+  storeSelectedCategories,
+  priceRange,
+  handleClearingCatFilters,
+  updateSearchParams,
+}) {
   //using state to toggle collapsing each filter
   const [isCatFilterShown, setIsCatFilterShown] = useState(true);
   const [isPriceFilterShown, setIsPriceFilterShown] = useState(true);
-  
+
   function collapseCatFilters() {
     setIsCatFilterShown(() => !isCatFilterShown);
   }
@@ -50,7 +59,12 @@ function Filter({ uniqueCategories, maxPrice, minPrice, category, storeSelectedC
         </div>
 
         <div className={styles.filterBox}>
-          {isCatFilterShown && category.length > 0 && <div role="button" onClick={handleClearingCatFilters} > &#10799; clear category filters</div>}
+          {isCatFilterShown && category.length > 0 && (
+            <div role="button" onClick={handleClearingCatFilters}>
+              {" "}
+              &#10799; clear category filters
+            </div>
+          )}
           {isCatFilterShown &&
             uniqueCategories.map((cat) => (
               <div key={cat}>
@@ -59,7 +73,7 @@ function Filter({ uniqueCategories, maxPrice, minPrice, category, storeSelectedC
                   name={cat}
                   value={cat}
                   checked={category.includes(cat)}
-                  onChange={(e) => storeSelectedCategories(e)}
+                  onChange={() => storeSelectedCategories(cat)}
                 />
                 <label> {cat}</label>
               </div>
@@ -93,10 +107,12 @@ function Filter({ uniqueCategories, maxPrice, minPrice, category, storeSelectedC
             </g>
           </svg>
         </div>
-        {isPriceFilterShown &&
+        {isPriceFilterShown && (
           <div>
             <div>
-              {priceRange === maxPrice ? "all ranges" : priceRange + "$ or less"}
+              {priceRange === maxPrice
+                ? "all ranges"
+                : priceRange + "$ or less"}
             </div>
             <input
               type="range"
@@ -104,15 +120,20 @@ function Filter({ uniqueCategories, maxPrice, minPrice, category, storeSelectedC
               min={minPrice}
               max={maxPrice}
               step={5}
-              value={priceRange? priceRange : maxPrice }
-              onChange={(e) => setPriceRange(Number(e.target.value))}
+              value={priceRange ? priceRange : maxPrice}
+              onChange={(e) => {
+                updateSearchParams({
+                  maxPrice: e.target.value,
+                  page: 1,
+                });
+              }}
             />
             <div className={styles.priceRange}>
               <span>${minPrice}</span>
               <span>${maxPrice}</span>
             </div>
           </div>
-        }
+        )}
       </div>
     </div>
   );
