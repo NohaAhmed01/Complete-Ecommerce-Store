@@ -31,11 +31,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home products={data} />} />
           <Route path="about" element={<About />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="products" element={data.length > 0 && <Products products={data} />} />
-          <Route path="products/:id" element={<ProductDetail />} />
+          <Route path="products/:id" element={<ProductDetail products={data} isLoading={isLoading}/>} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
