@@ -13,3 +13,10 @@
 .active {
     background-color: var(--primary-color);
 }
+
+.cta {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 28px;
+    font-size: 1rem;
+}

@@ -1,0 +1,45 @@
+.section {
+  display: flex;
+  padding: 50px;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: #6c6c6c;
+}
+
+.text {
+  flex: 1;
+  min-width: 280px;
+  padding: 50px;
+
+  h2 {
+    padding: 30px 0;
+  }
+
+  p {
+    max-width: 80%;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.mapWrapper {
+  flex: 1;
+  min-width: 280px;
+  border-radius: 15px;
+  overflow: hidden;
+  filter: drop-shadow(3px 10px 7px rgba(108, 106, 244, 0.349));
+
+  iframe {
+    width: 100%;
+    min-height: 400px;
+    display: block;
+  }
+}
