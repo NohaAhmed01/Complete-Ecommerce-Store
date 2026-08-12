@@ -35,7 +35,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="products" element={data.length > 0 && <Products products={data} />} />
-          <Route path="products/:id" element={<ProductDetail products={data} isLoading={isLoading}/>} />
+          <Route path="products/:id" element={<ProductDetail />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
