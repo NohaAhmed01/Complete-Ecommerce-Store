@@ -1,0 +1,33 @@
+.nav {
+  margin-top: 24px;
+}
+
+.heading {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  opacity: 0.9;
+  text-transform: uppercase;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list a {
+  color: inherit;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.list a:hover {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+.list :global(.active) {
+  color: var(--primary-color);
+  opacity: 1;
+}

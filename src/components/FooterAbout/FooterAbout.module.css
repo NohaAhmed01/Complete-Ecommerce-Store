@@ -1,0 +1,19 @@
+.about {
+  max-width: 480px;
+}
+
+.heading {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.about p {
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .about {
+    max-width: 100%;
+  }
+}
