@@ -43,3 +43,23 @@
     display: block;
   }
 }
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    padding: 40px 24px;
+  }
+
+  .text {
+    padding: 24px 0;
+    text-align: center;
+
+    p {
+      max-width: 100%;
+    }
+  }
+
+  .mapWrapper iframe {
+    min-height: 280px;
+  }
+}

@@ -1,9 +1,12 @@
 .pagination{
-    grid-column: 2;
-    justify-self: center;
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+
     button{
-        margin: 3px;
+        margin: 0;
     }
     :global(.active){
         background-color: var(--primary-color);

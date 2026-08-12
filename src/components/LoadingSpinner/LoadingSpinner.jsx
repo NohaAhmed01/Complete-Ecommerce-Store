@@ -1,9 +1,11 @@
-import styles from './LoadingSpinner.module.css'
+import styles from "./LoadingSpinner.module.css";
 
 function LoadingSpinner() {
-    return (
-        <span className={styles.loader}></span>
-    )
+  return (
+    <div className={styles.wrapper}>
+      <span className={styles.loader}></span>
+    </div>
+  );
 }
 
-export default LoadingSpinner
+export default LoadingSpinner;

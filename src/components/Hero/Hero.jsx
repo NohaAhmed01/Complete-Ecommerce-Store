@@ -8,12 +8,16 @@ function Hero({
   paragraph,
   ctaText = "Shop Now",
   ctaLink = "/products?page=1",
+  bgColor,
 }) {
   const navigate = useNavigate();
 
   return (
-    <section className={styles.hero}>
-      <img className={styles.bgImage} src={imgSrc} alt="" />
+    <section
+      className={styles.hero}
+      style={bgColor ? { backgroundColor: bgColor } : undefined}
+    >
+      <img className={styles.bgImage} src={imgSrc} alt="hero-img" />
       <div className={styles.overlay} />
       <div className={styles.content}>
         <h1>{heading}</h1>

@@ -1,6 +1,14 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  padding: 80px 24px 40px;
+}
+
 .loader {
     --color-1: #fff;
-    --color-2: #ff3d00;
+    --color-2: #646cff;
     --size: 1px;
   
     width: calc(48 * var(--size));

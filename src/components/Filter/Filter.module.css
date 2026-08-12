@@ -1,6 +1,15 @@
 .filterLayout{
     max-width: 300px;
     min-width: 200px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .filterLayout {
+        max-width: 100%;
+        width: 100%;
+        min-width: unset;
+    }
 }
 .header{
     text-transform: capitalize;

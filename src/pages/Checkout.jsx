@@ -1,9 +1,11 @@
+import styles from "./Checkout.module.css";
+
 function Checkout() {
-    return (
-        <div>
-            <h1>Checkout</h1>
-        </div>
-    )
+  return (
+    <div className={styles.page}>
+      <h1>Checkout</h1>
+    </div>
+  );
 }
 
-export default Checkout
+export default Checkout;

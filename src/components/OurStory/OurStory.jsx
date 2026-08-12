@@ -1,7 +1,11 @@
 import styles from './OurStory.module.css'
-function OurStory({children, heading, imgSrc, Order}) {
+
+function OurStory({ children, heading, imgSrc, Order, bgColor }) {
+    const sectionStyle = bgColor ? { backgroundColor: bgColor } : undefined;
+    const directionClass = Order === 0 ? styles.row : styles.rowReverse;
+
     return (
-        <section className={styles.section} style={Order === 0 ? {flexDirection: "row"}:{flexDirection: "row-reverse"}}>
+        <section className={`${styles.section} ${directionClass}`} style={sectionStyle}>
             <div className={styles.text}>
                 <h2>{heading}</h2>
                 <div>{children}</div>

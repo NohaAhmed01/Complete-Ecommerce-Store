@@ -2,15 +2,28 @@
     display: flex;
     padding: 50px;
     gap: 20px;
+    align-items: center;
 
     img {
+        width: 100%;
+        height: auto;
         border-radius: 15px;
         max-width: 600px;
         filter: drop-shadow(3px 10px 7px rgba(108, 106, 244, 0.349));
     }
 }
 
+.row {
+    flex-direction: row;
+}
+
+.rowReverse {
+    flex-direction: row-reverse;
+}
+
 .text {
+    flex: 1;
+    min-width: 280px;
     padding: 50px;
 
     h2 {
@@ -20,5 +33,32 @@
     div {
         max-width: 80%;
         text-align: justify;
+    }
+}
+
+.image {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .section {
+        flex-direction: column;
+        padding: 40px 24px;
+    }
+
+    .text {
+        padding: 24px 0;
+        text-align: center;
+
+        div {
+            max-width: 100%;
+        }
+    }
+
+    .image img {
+        max-width: 100%;
     }
 }

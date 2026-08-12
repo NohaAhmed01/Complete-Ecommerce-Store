@@ -20,9 +20,9 @@ function Home({ products = [] }) {
       />
 
       <FeaturedProducts
-        heading="Featured Skincare"
+        heading="Featured Groceries"
         products={products}
-        category="skincare"
+        category="groceries"
       />
 
       {topRated && (
@@ -30,6 +30,7 @@ function Home({ products = [] }) {
           heading={topRated.title}
           imgSrc={topRated.images[0]}
           Order={0}
+          bgColor={'#646cff32'}
         >
           <p>{topRated.description}</p>
           <br />

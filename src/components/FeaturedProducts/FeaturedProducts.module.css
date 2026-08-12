@@ -22,6 +22,15 @@
 }
 
 @media (max-width: 600px) {
+  .section {
+    padding: 40px 16px;
+  }
+
+  .heading {
+    margin-bottom: 28px;
+    font-size: 1.5rem;
+  }
+
   .grid {
     grid-template-columns: 1fr;
   }
