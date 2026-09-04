@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
+import Loader from "../components/Loader/Loader";
 import ProductGallery from "../components/ProductGallery/ProductGallery";
 import ProductReviews from "../components/ProductReviews/ProductReviews";
 import Button from "../components/Button/Button";
@@ -32,7 +32,7 @@ function ProductDetail() {
     fetchProduct();
   }, [id]);
 
-  if (isLoading) return <LoadingSpinner />;
+  if (isLoading) return <Loader />;
   if (error || !item) {
     return (
       <div className={styles.page}>

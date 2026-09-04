@@ -1,3 +1,5 @@
+import { useProducts } from "../contexts/ProductsContext";
+import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import heroImg from "../assets/hero2.png";
 import Hero from "../components/Hero/Hero";
@@ -5,9 +7,10 @@ import FeaturedProducts from "../components/FeaturedProducts/FeaturedProducts";
 import OurStory from "../components/OurStory/OurStory";
 import Button from "../components/Button/Button";
 
-function Home({ products = [] }) {
+function Home() {
   const navigate = useNavigate();
-  const topRated = [...products].sort((a, b) => b.rating - a.rating)[0];
+  const {products} = useProducts();
+  const topRated = useMemo(()=> [...products].sort((a, b) => b.rating - a.rating)[0], [products]); 
 
   return (
     <>
@@ -21,7 +24,6 @@ function Home({ products = [] }) {
 
       <FeaturedProducts
         heading="Featured Groceries"
-        products={products}
         category="groceries"
       />
 
@@ -47,7 +49,6 @@ function Home({ products = [] }) {
 
       <FeaturedProducts
         heading="Featured Furniture"
-        products={products}
         category="furniture"
       />
     </>

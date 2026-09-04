@@ -1,21 +1,21 @@
 import { useState } from "react";
 import styles from "./Filter.module.css";
+import { useProducts } from "../../contexts/ProductsContext";
 
 //style to rotate svg when clicked
 const rotate = {
   transform: "rotate(180deg)",
 };
 
-function Filter({
-  uniqueCategories,
+function Filter() {
+  const {uniqueCategories,
   maxPrice,
   minPrice,
-  category,
-  storeSelectedCategories,
-  priceRange,
-  handleClearingCatFilters,
+  categoriesParams: category ,
+  toggleCategory: storeSelectedCategories,
+  priceRangeParams: priceRange,
   updateSearchParams,
-}) {
+  handleClearingCatFilters} = useProducts();
   //using state to toggle collapsing each filter
   const [isCatFilterShown, setIsCatFilterShown] = useState(true);
   const [isPriceFilterShown, setIsPriceFilterShown] = useState(true);

@@ -1,7 +1,7 @@
 .section {
   margin-top: 64px;
   padding-top: 48px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid var(--light-color);
 }
 
 .heading {
@@ -17,7 +17,7 @@
 }
 
 .card {
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--light-color);
   border-radius: 16px;
   padding: 20px;
   display: flex;
