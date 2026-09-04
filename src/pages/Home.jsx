@@ -46,9 +46,9 @@ function Home({ products = [] }) {
       )}
 
       <FeaturedProducts
-        heading="Featured Fragrances"
+        heading="Featured Furniture"
         products={products}
-        category="fragrances"
+        category="furniture"
       />
     </>
   );

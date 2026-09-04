@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import Button from "../Button/Button";
 import styles from "./Hero.module.css";
+import Button from "../Button/Button";
 
 function Hero({
   imgSrc,
@@ -13,18 +13,22 @@ function Hero({
   const navigate = useNavigate();
 
   return (
-    <section
-      className={styles.hero}
-      style={bgColor ? { backgroundColor: bgColor } : undefined}
-    >
-      <img className={styles.bgImage} src={imgSrc} alt="hero-img" />
-      <div className={styles.overlay} />
-      <div className={styles.content}>
-        <h1>{heading}</h1>
-        <p>{paragraph}</p>
-        <Button type="cta" onClick={() => navigate(ctaLink)}>
-          {ctaText}
-        </Button>
+    <section>
+      <div
+        className={styles.hero}
+        style={bgColor ? { backgroundColor: bgColor } : undefined}
+      >
+        <img className={styles.bgImage} src={imgSrc} alt="hero-img" />
+        <div className={styles.overlay} />
+        <div className={styles.container}>
+          <div className={styles.content}>
+            <h1>{heading}</h1>
+            <p>{paragraph}</p>
+            <Button type="cta" onClick={() => navigate(ctaLink)}>
+              {ctaText}
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   );

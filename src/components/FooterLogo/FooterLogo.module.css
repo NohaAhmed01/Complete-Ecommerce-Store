@@ -10,6 +10,7 @@
   max-height: 80px;
   object-fit: contain;
   width: 100px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .logoText {
@@ -17,6 +18,9 @@
   font-weight: 700;
   color: var(--primary-color);
   letter-spacing: 0.05em;
+}
+.logo img:hover {
+  transform: rotate(360deg);
 }
 
 @media (max-width: 768px) {
