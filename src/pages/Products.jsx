@@ -4,6 +4,7 @@ import styles from "./Products.module.css";
 import ProductItem from "../components/ProductItem/ProductItem";
 import Pagination from "../components/Pagination/Pagination";
 import Filter from "../components/Filter/Filter";
+import Button from "../components/Button/Button";
 
 function Products({ products }) {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -94,7 +95,9 @@ function Products({ products }) {
       <div className={styles.main}>
         <div className={styles.gridLayout}>
           {paginatedProducts.map((item) => (
-            <ProductItem item={item} key={item.id} />
+            <ProductItem item={item} key={item.id} >
+              <Button type="addToCart">Add To Cart</Button>
+            </ProductItem>
           ))}
         </div>
         <Pagination

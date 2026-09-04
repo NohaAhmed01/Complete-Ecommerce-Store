@@ -1,5 +1,5 @@
 .footer {
-  background-color: #404040;
+  background-color: var(--dark-background);
   margin-top: auto;
   padding: 48px 40px;
 }
@@ -14,9 +14,9 @@
 
 .right {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   flex: 1;
+  max-width: 70%;
 }
 
 .divider {
@@ -41,6 +41,10 @@
 
   .right {
     align-items: center;
+    max-width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
   }
 
   .divider {

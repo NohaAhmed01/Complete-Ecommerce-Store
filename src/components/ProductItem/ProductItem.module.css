@@ -4,7 +4,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: 350px;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--light-color);
     border-radius: 30px;
     justify-self: center;
 }

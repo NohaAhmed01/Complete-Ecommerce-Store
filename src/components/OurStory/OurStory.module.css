@@ -1,4 +1,4 @@
-.section {
+.content {
     display: flex;
     padding: 50px;
     gap: 20px;
@@ -9,12 +9,15 @@
         height: auto;
         border-radius: 15px;
         max-width: 600px;
-        filter: drop-shadow(3px 10px 7px rgba(108, 106, 244, 0.349));
+        aspect-ratio: 1;
+        object-fit: cover;
     }
 }
 
 .row {
     flex-direction: row;
+    max-width: 1500px;
+    margin-inline: auto;
 }
 
 .rowReverse {

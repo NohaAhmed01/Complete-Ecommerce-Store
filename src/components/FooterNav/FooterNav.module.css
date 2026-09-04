@@ -1,9 +1,5 @@
-.nav {
-  margin-top: 24px;
-}
-
 .heading {
-  font-size: 1rem;
+  font-size: 20px;
   margin-bottom: 12px;
   opacity: 0.9;
   text-transform: uppercase;
@@ -18,7 +14,6 @@
 
 .list a {
   color: inherit;
-  opacity: 0.85;
   transition: opacity 0.2s ease, color 0.2s ease;
 }
 

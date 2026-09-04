@@ -1,9 +1,10 @@
 .btn {
     background-color: transparent;
     padding: 10px;
-    border-radius: 30px;
+    border-radius: 20px;
     border: 1px solid var(--primary-color);
     margin: 10px 0;
+    color: var(--light-color);
 }
 
 .addToCart {
@@ -16,7 +17,7 @@
 
 .cta {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--light-color);
     padding: 12px 28px;
     font-size: 1rem;
 }
@@ -24,5 +25,5 @@
 .disabled {
     opacity: 0.5;
     cursor: not-allowed;
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: var(--dark-background);
 }

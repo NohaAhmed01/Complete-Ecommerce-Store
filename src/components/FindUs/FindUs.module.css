@@ -1,9 +1,14 @@
 .section {
+  background-color: var(--secondary-color);
+}
+
+.content{
   display: flex;
   padding: 50px;
   gap: 20px;
   flex-wrap: wrap;
-  background-color: #6c6c6c;
+  max-width: 1600px;
+  margin-inline: auto;
 }
 
 .text {
@@ -35,7 +40,6 @@
   min-width: 280px;
   border-radius: 15px;
   overflow: hidden;
-  filter: drop-shadow(3px 10px 7px rgba(108, 106, 244, 0.349));
 
   iframe {
     width: 100%;

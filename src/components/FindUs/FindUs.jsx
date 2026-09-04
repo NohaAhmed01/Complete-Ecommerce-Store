@@ -10,26 +10,28 @@ function FindUs({
 }) {
   return (
     <section className={styles.section}>
-      <div className={styles.text}>
-        <h2>{heading}</h2>
-        <p>{description}</p>
-        <address className={styles.address}>
-          {address.map((line) => (
-            <span key={line}>{line}</span>
-          ))}
-        </address>
-      </div>
+      <div className={styles.content}>
+        <div className={styles.text}>
+          <h2>{heading}</h2>
+          <p>{description}</p>
+          <address className={styles.address}>
+            {address.map((line) => (
+              <span key={line}>{line}</span>
+            ))}
+          </address>
+        </div>
 
-      <div className={styles.mapWrapper}>
-        <iframe
-          src={mapEmbedUrl}
-          title={mapTitle}
-          height={mapHeight}
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
+        <div className={styles.mapWrapper}>
+          <iframe
+            src={mapEmbedUrl}
+            title={mapTitle}
+            height={mapHeight}
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
       </div>
     </section>
   );

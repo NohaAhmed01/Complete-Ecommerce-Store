@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import logo from "/logo.png"
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,6 +18,7 @@ function Navbar() {
 
   return (
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
+      <NavLink to="/"><img className={styles.logo} src={logo} alt="logo" /></NavLink>
       <ul className={styles.navList}>
         <li>
           <NavLink to="/">Home</NavLink>
@@ -28,7 +30,7 @@ function Navbar() {
           <NavLink to="about">About</NavLink>
         </li>
         <li>
-          <NavLink to="checkout">Checkout</NavLink>
+          <NavLink to="cart">Cart</NavLink>
         </li>
       </ul>
     </nav>

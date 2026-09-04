@@ -40,6 +40,37 @@ svg{
     width: 15px;
     height: 15px;
 }
+input[type="checkbox"] {
+    /* Remove default browser styling */
+    appearance: none;
+    -webkit-appearance: none;
+    
+    /* Create your custom checkbox dimensions and border */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--light-color); /* Unchecked background color */
+    cursor: pointer;
+    position: relative;
+    top:7px;
+  }
+ /* 1. Style the checkbox when checked */
+input[type="checkbox"]:checked {
+    background-color: var(--primary-color); /* Checked background color */
+  }
+  
+  /* 2. Create the custom checkmark using a pseudo-element */
+  input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 9px;
+    border: solid white;       /* Checkmark color */
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  } 
 input[type="range"]{
     width: 100%;
     accent-color: var(--primary-color);
@@ -50,7 +81,7 @@ input[type="range"]{
 }
 div[role="button"]{
     cursor: pointer; 
-    background-color:  #646cff26;
+    background-color:  var(--secondary-color);
     padding: 5px;
     border-radius: 10px;
     text-align: center;

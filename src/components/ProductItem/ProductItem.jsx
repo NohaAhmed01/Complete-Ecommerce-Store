@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import Button from "../Button/Button";
 import styles from "./ProductItem.module.css";
 
-function ProductItem({ item }) {
+function ProductItem({ item, children }) {
   const { title, price, description, images } = item;
   const [textSpreaded, setTextSpreaded] = useState(false);
 
@@ -34,7 +33,8 @@ function ProductItem({ item }) {
           </span>
         </p>
         <div>${price}</div>
-        <Button type="addToCart">Add To Cart</Button>
+        {children}
+        {/* <Button type="addToCart">Add To Cart</Button> */}
       </div>
     </div>
   );

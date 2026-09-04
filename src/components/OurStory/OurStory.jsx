@@ -1,20 +1,22 @@
-import styles from './OurStory.module.css'
+import styles from "./OurStory.module.css";
 
 function OurStory({ children, heading, imgSrc, Order, bgColor }) {
-    const sectionStyle = bgColor ? { backgroundColor: bgColor } : undefined;
-    const directionClass = Order === 0 ? styles.row : styles.rowReverse;
+  const sectionStyle = bgColor ? { backgroundColor: bgColor } : undefined;
+  const directionClass = Order === 0 ? styles.row : styles.rowReverse;
 
-    return (
-        <section className={`${styles.section} ${directionClass}`} style={sectionStyle}>
-            <div className={styles.text}>
-                <h2>{heading}</h2>
-                <div>{children}</div>
-            </div>
-            <div className={styles.image}>
-                <img src={imgSrc} alt="ourStory-img" />
-            </div>
-        </section>
-    )
+  return (
+    <section style={sectionStyle}>
+      <div className={`${styles.content} ${directionClass}`}>
+        <div className={styles.text}>
+          <h2>{heading}</h2>
+          <div>{children}</div>
+        </div>
+        <div className={styles.image}>
+          <img src={imgSrc} alt="ourStory-img" />
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default OurStory
+export default OurStory;

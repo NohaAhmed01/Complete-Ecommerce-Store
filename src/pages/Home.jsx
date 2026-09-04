@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import heroImg from "../assets/hamedtaha-YmBgW57IPtk-unsplash.jpg";
+import heroImg from "../assets/hero2.png";
 import Hero from "../components/Hero/Hero";
 import FeaturedProducts from "../components/FeaturedProducts/FeaturedProducts";
 import OurStory from "../components/OurStory/OurStory";
@@ -13,9 +13,9 @@ function Home({ products = [] }) {
     <>
       <Hero
         imgSrc={heroImg}
-        heading="Discover Your Beauty"
-        paragraph="Explore our curated collection of premium skincare, fragrances, and beauty essentials — crafted to help you look and feel your best every day."
-        ctaText="Browse Products"
+        heading="Every Thing You Need In One Place"
+        paragraph="Discover quality products at unbeatable prices. Shop with confidence and enjoy free shipping on orders over $100."
+        ctaText="Shop Now"
         ctaLink="/products?page=1"
       />
 
@@ -30,7 +30,7 @@ function Home({ products = [] }) {
           heading={topRated.title}
           imgSrc={topRated.images[0]}
           Order={0}
-          bgColor={'#646cff32'}
+          bgColor={"var(--secondary-color)"}
         >
           <p>{topRated.description}</p>
           <br />

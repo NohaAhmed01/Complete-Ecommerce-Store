@@ -3,7 +3,7 @@ import styles from "./FooterNav.module.css";
 
 function FooterNav({ links = [], heading = "Quick Links" }) {
   return (
-    <nav className={styles.nav}>
+    <nav>
       {heading && <h4 className={styles.heading}>{heading}</h4>}
       <ul className={styles.list}>
         {links.map(({ label, to }) => (

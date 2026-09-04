@@ -3,13 +3,12 @@
 }
 
 .heading {
-  font-size: 1.25rem;
+  font-size: 20px;
   margin-bottom: 12px;
 }
 
 .about p {
   line-height: 1.7;
-  opacity: 0.85;
 }
 
 @media (max-width: 768px) {
