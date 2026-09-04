@@ -49,21 +49,32 @@
 }
 
 @media (max-width: 768px) {
-  .section {
+  .content {
     flex-direction: column;
-    padding: 40px 24px;
+    padding: 40px 16px;
+  }
+
+  .text,
+  .mapWrapper {
+    min-width: 0;
+    width: 100%;
   }
 
   .text {
-    padding: 24px 0;
+    padding: 16px 0 0;
     text-align: center;
+
+    h2 {
+      padding: 16px 0;
+    }
 
     p {
       max-width: 100%;
+      text-align: left;
     }
   }
 
   .mapWrapper iframe {
-    min-height: 280px;
+    min-height: 240px;
   }
 }

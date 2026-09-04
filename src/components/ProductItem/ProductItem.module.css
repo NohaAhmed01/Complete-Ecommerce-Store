@@ -7,6 +7,7 @@
     border: 1px solid var(--light-color);
     border-radius: 30px;
     justify-self: center;
+    min-width: 0;
 }
 
 .productImgContainer {
@@ -42,6 +43,7 @@
     p{
         font-size: 14px;
         padding-bottom: 10px;
+        overflow-wrap: anywhere;
     }
     div{
         font-weight: 100;
@@ -50,5 +52,11 @@
     .textSpreader{
         text-decoration: underline;
         color: var(--primary-color);
+    }
+}
+
+@media (max-width: 600px) {
+    .productCard {
+        max-width: 100%;
     }
 }

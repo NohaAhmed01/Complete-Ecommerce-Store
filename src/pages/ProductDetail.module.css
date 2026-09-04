@@ -106,7 +106,7 @@
 
 @media (max-width: 768px) {
   .page {
-    padding: 72px 16px 40px;
+    padding: 84px 16px 40px;
   }
 
   .layout {
@@ -116,6 +116,10 @@
 
   .title {
     font-size: 1.5rem;
+  }
+
+  .discountedPrice {
+    font-size: 1.4rem;
   }
 
   .infoRow {

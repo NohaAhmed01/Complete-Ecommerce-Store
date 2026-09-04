@@ -22,6 +22,13 @@
     font-size: 1rem;
 }
 
+@media (max-width: 480px) {
+    .cta,
+    .addToCart {
+        width: 100%;
+    }
+}
+
 .disabled {
     opacity: 0.5;
     cursor: not-allowed;

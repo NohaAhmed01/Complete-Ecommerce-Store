@@ -86,3 +86,15 @@ div[role="button"]{
     border-radius: 10px;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .filterBox {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px 12px;
+    }
+
+    .filterBox > div[role="button"] {
+        grid-column: 1 / -1;
+    }
+}

@@ -47,17 +47,30 @@
 }
 
 @media (max-width: 900px) {
-    .section {
+    .content,
+    .row,
+    .rowReverse {
         flex-direction: column;
-        padding: 40px 24px;
+        padding: 40px 16px;
+    }
+
+    .text,
+    .image {
+        min-width: 0;
+        width: 100%;
     }
 
     .text {
-        padding: 24px 0;
+        padding: 16px 0 0;
         text-align: center;
+
+        h2 {
+            padding: 16px 0;
+        }
 
         div {
             max-width: 100%;
+            text-align: left;
         }
     }
 

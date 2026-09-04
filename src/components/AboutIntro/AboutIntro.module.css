@@ -27,10 +27,17 @@
 
 @media (max-width: 600px) {
     .heading img {
+        min-height: 50vh;
         height: 60vh;
     }
 
+    .heading .text {
+        width: calc(100% - 24px);
+        padding: 72px 8px 16px;
+    }
+
     .heading .text h2 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+        padding: 12px 0;
     }
 }

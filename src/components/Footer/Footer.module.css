@@ -29,14 +29,14 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 40px 24px;
+    padding: 32px 16px;
   }
 
   .inner {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 32px;
+    gap: 24px;
   }
 
   .right {
@@ -44,7 +44,8 @@
     max-width: 100%;
     justify-content: center;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
+    width: 100%;
   }
 
   .divider {

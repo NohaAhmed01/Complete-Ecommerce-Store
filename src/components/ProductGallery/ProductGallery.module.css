@@ -56,4 +56,9 @@
   .mainImage {
     aspect-ratio: 4 / 3;
   }
+
+  .thumbnail {
+    width: 64px;
+    height: 64px;
+  }
 }
