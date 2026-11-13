@@ -5,23 +5,22 @@ const Context = createContext();
 
 function ProductsContext({ children }) {
   const [products, setProducts] = useState([]);
-  const [isLoading, setisLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(function () {
     async function fetchData() {
       try {
-        setisLoading(true);
+        setIsLoading(true);
         const res = await fetch("https://dummyjson.com/products");
         const data = await res.json();
         setProducts(data.products);
       } catch (error) {
         console.error("some error happened");
       } finally {
-        setisLoading(false);
+        setIsLoading(false);
       }
     }
     fetchData();
   }, []);
-
   const [searchParams, setSearchParams] = useSearchParams();
   //getting a list of all unique categories to display in filters
   const uniqueCategories = useMemo(
@@ -30,6 +29,9 @@ function ProductsContext({ children }) {
   );
   //extracting the min and max to use in price range filter
   const { minPrice, maxPrice } = useMemo(() => {
+    if (products.length === 0) {
+      return { minPrice: 0, maxPrice: 0 };
+    }
     const prices = products.map((item) => item.price);
 
     return {
@@ -38,6 +40,7 @@ function ProductsContext({ children }) {
     };
   }, [products]);
 
+  const [search, setSearch] = useState("")
   //variables to hold the controlled categories and price inputs from url
   const categoriesParams = searchParams.get("category")?.split(",") ?? [];
   const priceRangeParams = Number(searchParams.get("maxPrice")) || maxPrice;
@@ -46,13 +49,14 @@ function ProductsContext({ children }) {
   const filteredProducts = useMemo(
     () =>
       products.filter((product) => {
+        const matchingSearch = product.title.toLowerCase().includes(search.toLowerCase());
         const matchingCategory =
           categoriesParams.length === 0 ||
           categoriesParams.includes(product.category);
         const matchingRange = product.price <= priceRangeParams;
-        return matchingCategory && matchingRange;
+        return matchingSearch && matchingCategory && matchingRange;
       }),
-    [products, categoriesParams, priceRangeParams],
+    [products, categoriesParams, priceRangeParams, search],
   );
 
   //a helper function that handles all url params updates logic
@@ -113,6 +117,8 @@ function ProductsContext({ children }) {
         uniqueCategories,
         maxPrice,
         minPrice,
+        search,
+        setSearch,
         categoriesParams,
         toggleCategory,
         priceRangeParams,
