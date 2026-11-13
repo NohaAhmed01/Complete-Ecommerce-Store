@@ -5,6 +5,11 @@ import { useProducts } from "../../contexts/ProductsContext";
 //style to rotate svg when clicked
 const rotate = {
   transform: "rotate(180deg)",
+  transition: "transform 0.3s ease-in-out",
+};
+const unrotate = {
+  transform: "rotate(0deg)",
+  transition: "transform 0.3s ease-in-out",
 };
 
 function Filter() {
@@ -39,7 +44,7 @@ function Filter() {
             xmlns="http://www.w3.org/2000/svg"
             role="button"
             onClick={collapseCatFilters}
-            style={isCatFilterShown ? null : rotate}
+            style={isCatFilterShown ? unrotate : rotate}
           >
             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
@@ -89,7 +94,7 @@ function Filter() {
             xmlns="http://www.w3.org/2000/svg"
             role="button"
             onClick={collapsePriceFilters}
-            style={isPriceFilterShown ? null : rotate}
+            style={isPriceFilterShown ? unrotate : rotate}
           >
             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
